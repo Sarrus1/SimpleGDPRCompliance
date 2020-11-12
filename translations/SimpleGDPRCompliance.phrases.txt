@@ -3,9 +3,11 @@
 	"Title"
 	{
 		"en" 	"GDPR Compliance"
+		"fr" 	"Loi RGPD"
 	}
 	"Content"
 	{
 		"en" 	"\nThis server uses cookies, tracks IP and SteamID\nto improve your experience.\nYou need to accept those conditions\nto player here."
+		"fr" 	"\nCe serveur utilise des cookies, sauvegarde IP et SteamID\nPour améliorer votre expérience.\nVous devez accepter cela \npour jouer dessus."
 	}
 }
