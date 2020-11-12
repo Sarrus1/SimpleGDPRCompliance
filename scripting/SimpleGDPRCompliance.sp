@@ -62,7 +62,6 @@ public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
 
 public Action GDPRMenu(int client, int args)
 {
-	PrintToChat(client, "Displaying Menu");
 	Menu menu = new Menu(MenuHandler, MenuAction_Select);
 	char sContent[256];
 	Format(sContent, sizeof(sContent), "%t", "Content");
