@@ -6,6 +6,6 @@
 	}
 	"Content"
 	{
-		"en" 	"This server uses cookies and tracks IP and SteamID to improve your experience.\n You need to accept those conditions to player here."
+		"en" 	"\n#############\nThis server uses cookies, tracks IP and SteamID\nto improve your experience.\nYou need to accept those conditions\nto player here."
 	}
 }
