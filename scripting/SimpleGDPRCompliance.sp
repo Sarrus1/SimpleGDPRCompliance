@@ -20,7 +20,7 @@ public Plugin myinfo =
 public void OnPluginStart()
 {
 	LoadTranslations("SimpleGDPRCompliance.phrases");
-	g_hGDPRCookie = RegClientCookie("GDPRCookie", "Cookie that remembers the clients GDPR preferences.", CookieAccess_Protected);
+	g_hGDPRCookie = RegClientCookie("GDPRCookie", "Remember client GDPR preferences.", CookieAccess_Protected);
 	HookEvent("player_spawn", OnPlayerSpawn, EventHookMode_Post);
 }
 
@@ -52,7 +52,7 @@ public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
 		else if(StrEqual(info, "#refuse"))
 		{
 			SetClientCookie(param1, g_hGDPRCookie, "0");
-			KickClient(param1, "You must accept the GDPR rules to play on this server");
+			KickClient(param1, "You must accept the GDPR conditions to use this server");
 		}
 		delete menu;
     }
@@ -66,9 +66,6 @@ public Action GDPRMenu(int client, int args)
 	char sContent[256];
 	Format(sContent, sizeof(sContent), "%t", "Content");
 	menu.SetTitle("%t", "Title", LANG_SERVER);
-	menu.AddItem("#spacer1", "", ITEMDRAW_SPACER);
-	menu.AddItem("#content", sContent, ITEMDRAW_DISABLED);
-	menu.AddItem("#spacer2", "", ITEMDRAW_SPACER);
 	menu.AddItem("#accept", "Accept");
 	menu.AddItem("#refuse", "Refuse");
 	menu.ExitButton = false;
