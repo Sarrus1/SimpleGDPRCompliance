@@ -63,7 +63,7 @@ public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
 public Action GDPRMenu(int client, int args)
 {
 	Menu menu = new Menu(MenuHandler, MenuAction_Select);
-	menu.SetTitle("%t", "Content", LANG_PLAYER);
+	menu.SetTitle("%t", "Content");
 	menu.AddItem("#accept", "Accept");
 	menu.AddItem("#refuse", "Refuse");
 	menu.ExitButton = false;
