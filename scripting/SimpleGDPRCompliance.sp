@@ -19,7 +19,7 @@ public Plugin myinfo =
  
 public void OnPluginStart()
 {
-	LoadTranslations("SimpleGDPRCompliance.phrases");
+	LoadTranslations("SimpleGDPRCompliance.phrases.txt");
 	g_hGDPRCookie = RegClientCookie("GDPRCookie", "Remember client GDPR preferences.", CookieAccess_Protected);
 	HookEvent("player_spawn", OnPlayerSpawn, EventHookMode_Post);
 }
