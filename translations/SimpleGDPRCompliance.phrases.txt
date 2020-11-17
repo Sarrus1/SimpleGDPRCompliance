@@ -3,6 +3,6 @@
 	"Content"
 	{
 		"en" 	"GDPR Compliance Notice\n \nThis server tracks your IP address and SteamID,\nand uses cookies to improve your experience.\n \nYou must accept these conditions to use this server.\n \n"
-		"fr" 	"Avis sur la RGPD\n \nCe serveur utilise des cookies, sauvegarde IP et SteamID\nPour améliorer votre expérience.\nVous devez accepter cela \npour jouer dessus."
+		"fr" 	"Avis sur la RGPD\n \nCe serveur utilise des cookies, sauvegarde IP et SteamID\nPour améliorer votre expérience.\n \nVous devez accepter cela pour jouer dessus."
 	}
 }
