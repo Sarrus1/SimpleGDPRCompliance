@@ -6,7 +6,6 @@
 #pragma semicolon 1
 
 Handle g_hGDPRCookie;
-Handle g_iTimer[MAXPLAYERS+1];
 
 public Plugin myinfo =
 {
@@ -17,6 +16,7 @@ public Plugin myinfo =
 	url = "https://github.com/Sarrus1/"
 };
  
+
 public void OnPluginStart()
 {
 	LoadTranslations("SimpleGDPRCompliance.phrases.txt");
@@ -24,18 +24,34 @@ public void OnPluginStart()
 	HookEvent("player_spawn", OnPlayerSpawn, EventHookMode_Post);
 }
 
-public Action OnPlayerSpawn(Event event, const char[] name, bool dontBroadcast)
+
+public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
-	int client = GetClientOfUserId(GetEventInt(event, "userid"));
+	CreateNative("ClientGDPRStatus", Native_ClientGDPRStatus);
+	return APLRes_Success;
+}
+
+
+public bool GDPRStatus(int client)
+{
 	char sCookieValue[12];
 	GetClientCookie(client, g_hGDPRCookie, sCookieValue, sizeof(sCookieValue));
 	int cookieValue = StringToInt(sCookieValue);
 	if (cookieValue != 1)
+		return false;
+	return true;
+}
+
+
+public Action OnPlayerSpawn(Event event, const char[] name, bool dontBroadcast)
+{
+	int client = GetClientOfUserId(GetEventInt(event, "userid"));
+	if (!GDPRStatus(client))
 	{
-		delete g_iTimer[client];
 		GDPRMenu(client, 0);
 	}
 }
+
 
 public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
 {
@@ -60,6 +76,7 @@ public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
   return 0;
 }
 
+
 public Action GDPRMenu(int client, int args)
 {
 	Menu menu = new Menu(MenuHandler, MenuAction_Select);
@@ -71,7 +88,13 @@ public Action GDPRMenu(int client, int args)
 	return Plugin_Handled;
 }
 
-public void OnClientDisconnect(int client)
+
+public int Native_ClientGDPRStatus(Handle plugin, int numParams)
 {
-  delete g_iTimer[client];
+	int client = view_as<bool>(GetNativeCell(1));
+	if (client < 1 || client > MaxClients)
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid client index (%d)", client);
+	if (!IsClientConnected(client))
+		return ThrowNativeError(SP_ERROR_NATIVE, "Client %d is not connected", client);
+	return GDPRStatus(client);
 }
