@@ -12,7 +12,7 @@ public Plugin myinfo =
 	name = "SimpleGDPRCompliance",
 	author = "Sarrus",
 	description = "A simple plugin to comply to the GDPR",
-	version = "1.0",
+	version = "1.1",
 	url = "https://github.com/Sarrus1/"
 };
  
