@@ -1,7 +1,7 @@
 # SimpleGDPRCompliance
 A simple Sourcemod plugin to notify users of the GDPR compliance on your server.
 
-![Downloads](https://img.shields.io/github/downloads/Sarrus1/SimpleGDPRCompliance/total) ![Last commit](https://img.shields.io/github/last-commit/Sarrus1/SimpleGDPRCompliance "Last commit") ![Open issues](https://img.shields.io/github/issues/Sarrus1/SimpleGDPRCompliance "Open Issues") ![Closed issues](https://img.shields.io/github/issues-closed/Sarrus1/SimpleGDPRCompliance "Closed Issues") ![Size](https://img.shields.io/github/repo-size/Sarrus1/SimpleGDPRCompliance "Size")
+![Downloads](https://img.shields.io/github/downloads/Sarrus1/SimpleGDPRCompliance/total?style=flat-square) ![Last commit](https://img.shields.io/github/last-commit/Sarrus1/SimpleGDPRCompliance?style=flat-square) ![Open issues](https://img.shields.io/github/issues/Sarrus1/SimpleGDPRCompliance?style=flat-square) ![Closed issues](https://img.shields.io/github/issues-closed/Sarrus1/SimpleGDPRCompliance?style=flat-square) ![Size](https://img.shields.io/github/repo-size/Sarrus1/SimpleGDPRCompliance?style=flat-square) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Sarrus1/SimpleGDPRCompliance/Compile%20with%20SourceMod?style=flat-square)
 
 ## Description ##
 Plugin that allows to display a GDPR compliance notice when a client first connects.
