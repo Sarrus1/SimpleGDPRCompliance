@@ -1,6 +1,4 @@
 #include <sourcemod>
-#include <sdkhooks>
-#include <sdktools>
 #include <clientprefs>
 #pragma newdecls required
 #pragma semicolon 1
@@ -68,7 +66,7 @@ public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
 		else if(StrEqual(info, "#refuse"))
 		{
 			SetClientCookie(param1, g_hGDPRCookie, "0");
-			KickClient(param1, "You must accept the GDPR conditions to use this server");
+			KickClient(param1, "%t", "KickMessage");
 		}
 		delete menu;
     }

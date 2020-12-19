@@ -6,4 +6,9 @@
 		"fr" 	"Avis sur la RGPD\n \nCe serveur utilise des cookies, sauvegarde IP et SteamID\nPour améliorer votre expérience.\n \nVous devez accepter cela pour jouer dessus."
 		"hu" 	"GDPR Beleegyezés értesítés\n \nEz a szerver követi az IP címedet és a SteamID-et,\nés sütiket használ hogy javítsa az élményedet.\n \nEl kell fogadnod ezeket a körülményeket ahhoz hogy használhasd ezt a szervert.\n \n"
 	}
+	"KickMessage"
+	{
+		"en"	"You must accept the GDPR notice to use this server."
+		"fr"	"Vous devez accepter les conditions RGPD pour jouer sur nos serveurs."
+	}
 }
