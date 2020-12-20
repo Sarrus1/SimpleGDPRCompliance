@@ -4,21 +4,24 @@
 	{
 		"en" 	"--- European Union GDPR Compliance Notice ---\n \nThis server logs your SteamID and IP address to enforce bans,\nand sets a cookie so you will only see this notification once.\n \nYou must accept this notification to use this server.\n \n"
 		"fr"	"--- Informations sur la RGPD dans l'UE---\n \nCe serveur enregistre vos SteamID et addresses IP pour les bans,\net utilise un cookie pour que vous ne voyez ce message qu'une seule fois.\n \nVous devez accepter cette notifications pour utiliser ce serveur.\n \n"
-		"hu" 	"GDPR Beleegyezés értesítés\n \nEz a szerver követi az IP címedet és a SteamID-et,\nés sütiket használ hogy javítsa az élményedet.\n \nEl kell fogadnod ezeket a körülményeket ahhoz hogy használhasd ezt a szervert.\n \n"
+		"hu" 	"--- Európai Uniós GDPR értesítés ---\n \nEz a szerver naplózza a SteamID-et és az IP címedet, ezekkel történik a tiltás.\nLétrehoz egy sütit, így csak egyszer fogod látni ezt az üzenetet.\n \nEl kell fogadnod ezt az értesítést ahhoz hogy használhasd a szervert.\n \n"
 	}
 	"KickMessage"
 	{
 		"en"	"You must accept the GDPR notice to use this server."
 		"fr"	"Vous devez accepter les conditions RGPD pour jouer sur nos serveurs."
+		"hu"	"El kell fogadnod a GDPR értesítést ahhoz hogy használhasd a szervert."
 	}
 	"Accept"
 	{
 		"en"	"Accept"
 		"fr"	"Accepter"
+		"hu"	"Elfogad"
 	}
 	"Refuse"
 	{
 		"en"	"Refuse"
 		"fr"	"Refuser"
+		"hu"	"Elutasit"
 	}
 }
