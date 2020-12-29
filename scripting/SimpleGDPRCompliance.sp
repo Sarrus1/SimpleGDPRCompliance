@@ -20,6 +20,7 @@ public void OnPluginStart()
 	LoadTranslations("SimpleGDPRCompliance.phrases.txt");
 	g_hGDPRCookie = RegClientCookie("GDPRCookie", "Remember client GDPR preferences.", CookieAccess_Protected);
 	HookEvent("player_spawn", OnPlayerSpawn, EventHookMode_Post);
+	RegAdminCmd("sm_reset", Command_Reset, ADMFLAG_ROOT);
 }
 
 
@@ -98,4 +99,11 @@ public int Native_ClientGDPRStatus(Handle plugin, int numParams)
 	if (!IsClientConnected(client))
 		return ThrowNativeError(SP_ERROR_NATIVE, "Client %d is not connected", client);
 	return GDPRStatus(client);
+}
+
+
+public Action Command_Reset(int client, int args)
+{
+	SetClientCookie(client, g_hGDPRCookie, "0");
+	return Plugin_Continue;
 }
