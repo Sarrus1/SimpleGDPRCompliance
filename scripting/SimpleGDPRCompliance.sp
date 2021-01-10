@@ -36,7 +36,7 @@ public bool GDPRStatus(int client)
 	char sCookieValue[12];
 	GetClientCookie(client, g_hGDPRCookie, sCookieValue, sizeof(sCookieValue));
 	int cookieValue = StringToInt(sCookieValue);
-	return !(cookieValue != 1);
+	return cookieValue == 1;
 }
 
 
