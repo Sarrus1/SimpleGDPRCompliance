@@ -36,9 +36,7 @@ public bool GDPRStatus(int client)
 	char sCookieValue[12];
 	GetClientCookie(client, g_hGDPRCookie, sCookieValue, sizeof(sCookieValue));
 	int cookieValue = StringToInt(sCookieValue);
-	if (cookieValue != 1)
-		return false;
-	return true;
+	return !(cookieValue != 1);
 }
 
 
@@ -46,9 +44,7 @@ public Action OnPlayerSpawn(Event event, const char[] name, bool dontBroadcast)
 {
 	int client = GetClientOfUserId(GetEventInt(event, "userid"));
 	if (!GDPRStatus(client))
-	{
 		GDPRMenu(client, 0);
-	}
 }
 
 
@@ -61,9 +57,7 @@ public int MenuHandler(Menu menu, MenuAction action, int param1, int param2)
 		char info[32];
 		menu.GetItem(param2, info, sizeof(info));
 		if (StrEqual(info, "#accept"))
-		{
 			SetClientCookie(param1, g_hGDPRCookie, "1");
-		}
 		else if(StrEqual(info, "#refuse"))
 		{
 			SetClientCookie(param1, g_hGDPRCookie, "0");
